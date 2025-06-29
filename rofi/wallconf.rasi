@@ -1,0 +1,284 @@
+/**
+ * ROFI Catppuccin Mocha theme for Wallpaper Selector with Preview
+ * Based on Catppuccin Mocha color palette
+ */
+
+* {
+    /* Catppuccin Mocha Colors */
+    rosewater: #f5e0dc;
+    flamingo:  #f2cdcd;
+    pink:      #f5c2e7;
+    mauve:     #cba6f7;
+    red:       #f38ba8;
+    maroon:    #eba0ac;
+    peach:     #fab387;
+    yellow:    #f9e2af;
+    green:     #a6e3a1;
+    teal:      #94e2d5;
+    sky:       #89dceb;
+    sapphire:  #74c7ec;
+    blue:      #89b4fa;
+    lavender:  #b4befe;
+    text:      #cdd6f4;
+    subtext1:  #bac2de;
+    subtext0:  #a6adc8;
+    overlay2:  #9399b2;
+    overlay1:  #7f849c;
+    overlay0:  #6c7086;
+    surface2:  #585b70;
+    surface1:  #45475a;
+    surface0:  #313244;
+    base:      #1e1e2e;
+    mantle:    #181825;
+    crust:     #11111b;
+
+    /* Theme assignments */
+    background-color: transparent;
+    foreground:       @text;
+    border-color:     @mauve;
+    separatorcolor:   @surface0;
+    
+    normal-background:           @base;
+    normal-foreground:           @text;
+    alternate-normal-background: @mantle;
+    alternate-normal-foreground: @text;
+    
+    selected-normal-background:  @mauve;
+    selected-normal-foreground:  @crust;
+    
+    active-background:           @base;
+    active-foreground:           @green;
+    alternate-active-background: @mantle;
+    alternate-active-foreground: @green;
+    selected-active-background:  @green;
+    selected-active-foreground:  @crust;
+    
+    urgent-background:           @base;
+    urgent-foreground:           @red;
+    alternate-urgent-background: @mantle;
+    alternate-urgent-foreground: @red;
+    selected-urgent-background:  @red;
+    selected-urgent-foreground:  @crust;
+}
+
+window {
+    transparency:     "real";
+    location:         center;
+    anchor:           center;
+    fullscreen:       false;
+    width:            1200px;
+    height:           700px;
+    x-offset:         0px;
+    y-offset:         0px;
+    
+    enabled:          true;
+    margin:           0px;
+    padding:          0px;
+    border:           2px solid;
+    border-radius:    12px;
+    border-color:     @border-color;
+    background-color: @base;
+    cursor:           "default";
+}
+
+mainbox {
+    enabled:          true;
+    spacing:          10px;
+    margin:           0px;
+    padding:          20px;
+    border:           0px solid;
+    border-radius:    0px 0px 0px 0px;
+    border-color:     @border-color;
+    background-color: transparent;
+    children:         [ "inputbar", "listview" ];
+}
+
+inputbar {
+    enabled:          true;
+    spacing:          10px;
+    margin:           0px 0px 0px 0px;
+    padding:          12px 16px;
+    border:           2px solid;
+    border-radius:    8px;
+    border-color:     @border-color;
+    background-color: @surface0;
+    text-color:       @foreground;
+    children:         [ "prompt", "textbox-prompt-colon", "entry" ];
+}
+
+prompt {
+    enabled:          true;
+    background-color: transparent;
+    text-color:       @mauve;
+    font:             "JetBrains Mono Bold 12";
+}
+
+textbox-prompt-colon {
+    enabled:          true;
+    expand:           false;
+    str:              " ";
+    background-color: transparent;
+    text-color:       @text;
+}
+
+entry {
+    enabled:          true;
+    background-color: transparent;
+    text-color:       @text;
+    cursor:           text;
+    placeholder:      "Search wallpapers...";
+    placeholder-color: @overlay1;
+    font:             "JetBrains Mono 11";
+}
+
+listview {
+    enabled:          true;
+    columns:          2;
+    lines:            8;
+    cycle:            true;
+    dynamic:          true;
+    scrollbar:        true;
+    layout:           vertical;
+    reverse:          false;
+    fixed-height:     true;
+    fixed-columns:    true;
+    
+    spacing:          10px;
+    margin:           0px;
+    padding:          0px;
+    border:           2px solid;
+    border-radius:    8px;
+    border-color:     @surface0;
+    background-color: @mantle;
+    text-color:       @foreground;
+    cursor:           "default";
+}
+
+scrollbar {
+    handle-width:     8px;
+    handle-color:     @mauve;
+    border-radius:    8px;
+    background-color: @surface0;
+}
+
+element {
+    enabled:          true;
+    spacing:          8px;
+    margin:           0px;
+    padding:          8px;
+    border:           0px solid;
+    border-radius:    6px;
+    border-color:     @border-color;
+    background-color: transparent;
+    text-color:       @foreground;
+    orientation:      horizontal;
+    cursor:           pointer;
+}
+
+element normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+
+element normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+
+element normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+
+element selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+element selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+
+element selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+
+element alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+
+element alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+
+element alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color:       inherit;
+    size:             64px;
+    cursor:           inherit;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    highlight:        inherit;
+    cursor:           inherit;
+    vertical-align:   0.5;
+    horizontal-align: 0.0;
+    font:             "JetBrains Mono 10";
+}
+
+mode-switcher{
+    enabled:          true;
+    spacing:          10px;
+    margin:           0px;
+    padding:          0px;
+    border:           0px solid;
+    border-radius:    0px;
+    border-color:     @border-color;
+    background-color: transparent;
+    text-color:       @foreground;
+}
+
+button {
+    padding:          8px 16px;
+    border:           0px solid;
+    border-radius:    6px;
+    border-color:     @border-color;
+    background-color: @surface1;
+    text-color:       @foreground;
+    cursor:           pointer;
+}
+
+button selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+message {
+    enabled:          true;
+    margin:           0px;
+    padding:          12px;
+    border:           0px solid;
+    border-radius:    6px;
+    border-color:     @border-color;
+    background-color: @surface0;
+    text-color:       @foreground;
+}
+
+textbox {
+    background-color: transparent;
+    text-color:       @foreground;
+    vertical-align:   0.5;
+    horizontal-align: 0.0;
+    highlight:        none;
+}

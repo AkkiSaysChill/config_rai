@@ -1,0 +1,11 @@
+[Unit]
+Description=Battery notification timer
+
+[Timer]
+OnBootSec=30s
+OnUnitActiveSec=60s
+Unit=battery_notify.service
+
+[Install]
+WantedBy=default.target
+

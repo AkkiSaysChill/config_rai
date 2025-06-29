@@ -1,0 +1,6 @@
+[Unit]
+Description=Battery notification service
+
+[Service]
+Type=oneshot
+ExecStart=/home/heisenberg/.config/hypr/battery-info.sh

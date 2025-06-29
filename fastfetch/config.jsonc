@@ -1,0 +1,72 @@
+
+{
+
+  // Use a small Arch Linux ASCII logo
+  "logo": {
+    "type": "small",        // Use built-in small ASCII logo
+    "source": "arch",       // Built-in logo name
+    "padding": {
+      "top": 1,
+      "left": 1,
+      "right": 2
+    },
+    "color": {
+      "1": "blue",
+      "2": "blue"
+    }
+  },
+
+   "display": {
+        "separator": ":  "
+    },
+
+  // Only show selected modules
+  "modules": [
+    "break",
+    {
+      "type": "host",
+      "key": "Host",
+      "keyColor": "blue",
+      "separator": ": ",
+      "keyWidth": 12
+    },
+    {
+      "type": "wm",
+      "key": "WM",
+      "keyColor": "blue",
+      "separator": ": ",
+      "keyWidth": 12
+    },
+    {
+      "type": "shell",
+      "key": "Shell",
+      "keyColor": "blue",
+      "separator": ": ",
+      "keyWidth": 12
+    },
+    {
+      "type": "terminal",
+      "key": "Terminal",
+      "keyColor": "blue",
+      "separator": ": ",
+      "keyWidth": 12
+    },
+    {
+      "type": "memory",
+      "key": "RAM",
+      "keyColor": "blue",
+      "separator": ": ",
+      "keyWidth": 12
+    },
+    {
+      "type": "uptime",
+      "key": "Uptime",
+      "keyColor": "blue",
+      "separator": ": ",
+      "keyWidth": 12
+    },
+    "break",
+    "break"
+  ]
+}
+

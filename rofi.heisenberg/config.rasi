@@ -1,0 +1,9 @@
+
+configuration {
+  font: "JetBrainsMono Nerd Font 12";
+  show-icons: true;
+  location: 0; // top-left
+  modi: "drun,run,window";
+  theme: "~/.config/rofi/launcher.rasi";
+}
+
